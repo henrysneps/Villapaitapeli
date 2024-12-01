@@ -9,7 +9,8 @@ public class ViewController : MonoBehaviour
 	private View
 		startView,
 		choiceView,
-		happyTransitionView,
+		happyTransitionView1,
+		happyTransitionView2,
 		happyGameOverView,
 		unhappyTransitionView,
 		unhappyGameOverView;
@@ -39,7 +40,8 @@ public class ViewController : MonoBehaviour
 	{
 		DeactivateView(startView);
 		DeactivateView(choiceView);
-		DeactivateView(happyTransitionView);
+		DeactivateView(happyTransitionView1);
+		DeactivateView(happyTransitionView2);
 		DeactivateView(happyGameOverView);
 		DeactivateView(unhappyTransitionView);
 		DeactivateView(unhappyGameOverView);
@@ -76,7 +78,7 @@ public class ViewController : MonoBehaviour
 
 	public void ShowHappyTransitionView()
 	{
-		ShowView(happyTransitionView);
+		ShowView(happyTransitionView1);
 	}
 
 	public void ShowHappyGameOverView()
