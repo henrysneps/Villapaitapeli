@@ -18,7 +18,7 @@ public class View : MonoBehaviour
 	public View ViewToTransitionTo {  get { return viewToTransitionTo; } }
 
 	[SerializeField]
-	private List<UnityEvent> onViewShowListeners;
+	private UnityEvent onViewShowListeners;
 
 
 	/// <summary>
@@ -31,10 +31,7 @@ public class View : MonoBehaviour
 
 	private void InvokeOnViewShowListeners()
 	{
-		foreach (UnityEvent listener in onViewShowListeners)
-		{
-			listener.Invoke();
-		}
+		onViewShowListeners.Invoke();
 	}
 
 }
